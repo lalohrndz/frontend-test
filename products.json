@@ -9,7 +9,7 @@
         },
         {
             "name": "Camba Pale Ale",
-            "description": "La Souche Franc-Bois d’hiver. Cerveza pale.",
+            "description": "La Souche Franc-Bois dhiver. Cerveza pale.",
             "price": 85300,
             "img": "camba.png",
             "filterId": 2
