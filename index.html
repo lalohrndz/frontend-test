@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanta@latest/dist/">
 </head>
 <body>
     <header >
-        <nav class="blue-grey lighten-4">
-            <img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets/Personal/logo_recortado.png" alt="logo" id="logo">
+        <nav id="navigation-bar">
+            <div id="menu">
+                <img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets/Personal/logo_transparent_recortado.png" alt="logo" id="logo">
+                <img src="svg/cart.svg" alt="cart" id="car" data-target="slide-out" class="sidenav-trigger">
+            </div>
         </nav>
+        <ul id="slide-out" class="sidenav">
+            <h4>Tu lista de compras</h4>
+            
+          </ul>
     </header>
     <main>
         <div>
@@ -30,7 +38,26 @@
     <script src="data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        M.autoinit();
+        M.AutoInit();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+          el: "#navigation-bar",
+          mouseControls: false,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7f5500,
+          shininess: 95.00,
+          waveHeight: 9.50,
+          waveSpeed: 0.80,
+          zoom: 1.5
+        })
+        </script>
 </body>
 </html>

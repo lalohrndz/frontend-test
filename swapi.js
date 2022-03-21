@@ -44,10 +44,7 @@ function searchCharacter(){
     filter = input.value.toUpperCase(),
     ul = document.getElementById("person"),
     li = ul.getElementsByClassName("col s12 m6 l6"),
-    name,
-    txtValue;
-
-    
+    name;
 
     for (let i = 0; i < li.length; i++) {
         name = li[i].getElementsByClassName("collapsible-header")[0].innerText;

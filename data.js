@@ -8,8 +8,6 @@ fetch('products.json')
 
             for (const data in json) {
                 json[data].forEach(product => {
-                    console.log(product);
-
                     let price = new Intl.NumberFormat('en-IN').format(product.price)
                     cards.innerHTML = cards.innerHTML + 
                     '<div class="card">'+
@@ -23,7 +21,7 @@ fetch('products.json')
                             '</div>'+
                             '<div class="card-action">'+
                                 '<p>$'+price+'</p>'+
-                                '<a href="#" class="btn-agregar">AGREGAR</a>'+
+                                '<a href="#" class="btn-agregar waves-effect">AGREGAR</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'
