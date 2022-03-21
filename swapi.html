@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAPI</title>
+    <link rel="stylesheet" href="swapi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>SWAPI</h1>
+        </nav>
+    </header>
+    <main>
+        
+
+        <ul class="collapsible" id="person">
+        </ul>
+        <button class="btn waves-effect" id="page" value="https://swapi.dev/api/people" onclick="getPeople()">More characters</button>
+    </main>
+    <script src="swapi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+</html>
