@@ -2,7 +2,6 @@ let page = document.getElementById("page");
 window.onload = getPeople(page.value);
 
 function getPeople() {
-    console.log(page.value);    
     if(page.value == "null"){
         M.toast({html:`That are all the characters!`})
     }else{
@@ -22,13 +21,13 @@ function getPeople() {
                         <div class="collapsible-header">${p.name}</div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Heigh: ${p.height}</li>
-                                <li>Mass: ${p.mass}</li>
-                                <li>Hair color: ${p.hair_color}</li>
-                                <li>Skin color: ${p.skin_color}</li>
-                                <li>Eye color: ${p.eye_color}</li>
-                                <li>Birth year: ${p.birth_year}</li>
-                                <li>Gender: ${p.gender}</li>
+                                <li><a href="#">Heigh: ${p.height}</a></li>
+                                <li><a href="#">Mass: ${p.mass}</a></li>
+                                <li><a href="#">Hair color: ${p.hair_color}</a></li>
+                                <li><a href="#">Skin color: ${p.skin_color}</a></li>
+                                <li><a href="#">Eye color: ${p.eye_color}</a></li>
+                                <li><a href="#">Birth year: ${p.birth_year}</a></li>
+                                <li><a href="#">Gender: ${p.gender}</a></li>
                             </ul>
                         </div>
                     </li>`
@@ -38,6 +37,22 @@ function getPeople() {
             }
         )
     }
-    
 }
 
+function searchCharacter(){
+    let input = document.getElementById("search-input"),
+    filter = input.value.toUpperCase(),
+    ul = document.getElementById("person"),
+    li = ul.getElementsByClassName("col s12 m6 l6"),
+    name,
+    txtValue;
+
+    
+
+    for (let i = 0; i < li.length; i++) {
+        name = li[i].getElementsByClassName("collapsible-header")[0].innerText;
+        (name.toUpperCase().indexOf(filter) > -1) 
+        ? li[i].style.display = "" 
+        : li[i].style.display = "none";
+    }
+}
